@@ -1,0 +1,49 @@
+{
+  "name": "astroframe",
+  "version": "0.1.0",
+  "description": "JavaScript translation of the IAU SOFA (Standards of Fundamental Astronomy) C library, release 2023-10-11, for browsers and Node.js. A derived work; not endorsed by SOFA.",
+  "keywords": [
+    "astronomy",
+    "sofa",
+    "astrometry",
+    "time-scales",
+    "coordinates",
+    "precession",
+    "nutation",
+    "react",
+    "vite"
+  ],
+  "license": "SEE LICENSE IN LICENSE-SOFA.txt",
+  "author": "Behrouz Safari <behrouz.safari@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/behrouzz/astroframe.git"
+  },
+  "bugs": {
+    "url": "https://github.com/behrouzz/astroframe/issues"
+  },
+  "homepage": "https://github.com/behrouzz/astroframe#readme",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./src/index.js",
+  "module": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.js",
+      "default": "./src/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src/**/*.js",
+    "src/index.d.ts",
+    "LICENSE-SOFA.txt",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node test/t_sofa.mjs",
+    "generate": "python tools/generate.py && python tools/gen_tests.py"
+  }
+}
